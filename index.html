@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Blog Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: black;
+            box-shadow: 0 2px 4px rgba(255, 165, 0, 0.5); /* Orange shadow */
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: orange; /* Orange logo */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: orange; /* Orange heading */
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .search-bar input,
+        .search-bar select {
+            padding: 0.5rem;
+            font-size: 1rem;
+            flex: 1;
+            background-color: black;
+            color: white;
+            border: 1px solid orange; /* Orange border */
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .blog-post {
+            background-color: black;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(255, 165, 0, 0.5); /* Orange shadow */
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .blog-post h2 {
+            font-size: 1.25rem;
+            margin: 0.5rem 0;
+            color: orange; /* Orange heading */
+        }
+
+        .blog-post p {
+            color: white;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: black;
+            color: white;
+            margin-top: 2rem;
+            border-top: 1px solid orange; /* Orange border */
+        }
+
+        @media (max-width: 600px) {
+            .search-bar {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">GROWTH SPARK PLUS BLOG</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Growth Spark Blog</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search by title...">
+            <select>
+                <option value="all">All categories</option>
+                <option value="web-design">Web Design</option>
+                <option value="career">Career</option>
+                <option value="portfolio">Portfolio</option>
+            </select>
+        </div>
+        <div class="blog-grid">
+            <div class="blog-post">
+                <img src="exercise.jpg" alt="Blog Post 1">
+                <h2>Best Home Exercises To Reduce Fat</h2>
+                <p><em>Click To Read Current/Latest News Updates On Home Exercises...</em></p>
+            </div>
+            <div class="blog-post">
+                <img src="food.jpg" alt="Blog Post 2">
+                <h2>Home Made Recipes, Good For Health <strong>in all ramifications</strong></h2>
+                <p><em>Click To Read Current/Latest News Updates On Food & Nutrition...</em></p>
+            </div>
+            <div class="blog-post">
+                <img src="sports.jpg" alt="Blog Post 3">
+                <h2>10 Top Tips Getting Started With Sports</h2>
+                <p><em>Click To Read Current/Latest News Updates On Sports...</em></p>
+            </div>
+            <div class="blog-post">
+                <img src="politicss.jpg" alt="Blog Post 4">
+                <h2>Ongoing Crisis In The Political Team</h2>
+                <p><em>Click To Read Current/Latest News Updates On Politics...</em></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Growth Spark Plus Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
